@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -d /etc/adm-lite ]; then
+rm -rf /etc/adm-lite
+fi
+
+mkdir /etc/adm-lite
+cp -r /etc/adm-backup/* /etc/adm-lite
+chmod +x /etc/adm-lite/*
+
+echo -e "- \e[1;33mRadma restored!\e[0m"
