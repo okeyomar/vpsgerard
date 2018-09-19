@@ -154,7 +154,7 @@ chmod + x / etc / adm-lite / verifica
 wget https://raw.githubusercontent.com/okeyomar/vpsgerard/master/adm-lite/versao_script -O / etc / adm-lite / versao_script 1> / dev / null 2> / dev / stdout
 chmod + x / etc / adm-lite / versao_script
 
-wget https://raw.githubusercontent.com/okeyomar/vpsgerard/master/adm-lite/menu_inst -O / etc / adm-lite / menu_inst 1> / dev / null 2> / dev / stdout
+wget https://raw.githubusercontent.com/okeyomar/vpsgerard/master/adm-lite/menu_inst -O / etc / adm-lite / menu_inst 2> / dev / null 1> / dev / stdout
 chmod + x / etc / adm-lite / menu_inst
 
 wget https://raw.githubusercontent.com/okeyomar/vpsgerard/master/adm-lite/restore -O / etc / adm-backup / restore 1> / dev / null 2> / dev / stdout
@@ -165,6 +165,7 @@ cp -r f / etc / adm-lite / * / etc / adm-backup
 
 # Instalar dependencias
 apt-get install screen -y
+apt-get install menu_inst -y
 apt-get install python -y
 apt-get install lsof -y
 apt-get install python3-pip -y
