@@ -9,36 +9,36 @@ apt-get upgrade -y
 
 # Init
 claro
-echo  " "
-echo -e "    \ e [1; 33m8888888b. 888 \ e [0m "
-echo -e "    \ e [1; 33m888 Y88b 888 \ e [0m "
-echo -e "    \ e [1; 33m888 888 888 \ e [0m "
-echo -e "    \ e [1; 33m888 d88P 8888b. .d88888 88888b.d88b. 8888b. \ e [0m "
-echo -e "    \ e [1; 33m8888888P \"       \ " 88b d88 \" 888 888 \ " 888 \" 88b      \ " 88b \ e [0m "
-echo -e "    \ e [1; 33m888 T88b .d888888 888 888 888 888 888 .d888888 \ e [0m "
-echo -e "    \ e [1; 33m888 T88b 888 888 Y88b 888 888 888 888 888 888 \ e [0m "
-echo -e "    \ e [1; 33m888 T88b \" Y888888   \ " Y88888 888 888 888 \" Y888888 \ e [0m "
-echo -e "    \ e [1; 33m ------------------------ e [0m \ e [1; 31mReverse Engineered ADM \ e [0m \ e [1; 33m --- \ e [0m "
-echo  " "
-echo  " "
-echo -e " > \ e [1; 34mPresione enter para instalar Radma ... \ e [0m "
-leer
-echo -e " - \ e [1; 33mInstalación, espere ... \ e [0m "
-echo  " "
+echo   "  "
+echo -e "     \ e [1; 33m8888888b. 888 \ e [0m "
+echo -e "     \ e [1; 33m888 Y88b 888 \ e [0m "
+echo -e "     \ e [1; 33m888 888 888 \ e [0m "
+echo -e "     \ e [1; 33m888 d88P 8888b. .d88888 88888b.d88b. 8888b. \ e [0m "
+echo -e "     \ e [1; 33m8888888P \"        \ " 88b d88 \" 888 888 \ " 888 \" 88b \ " 88b \ e [0m "
+echo -e "     \ e [1 ; 33m888 T88b .d888888 888 888 888 888 888 .d888888 \ e [0m "
+echo -e "     \ e [1 ; 33m888 T88b 888 888 Y88b 888 888 888 888 888 888 \ e [0m "
+echo -e "     \ e [1 ; 33m888 T88b \" Y888888    \ " Y88888 888 888 888 \" Y888888 \ e [0m "
+echo  -e  "     \ e [1; 33m ------------------------ e [0m \ e [1; 31mReverse Engineered ADM \ e [0m \ e [1; 33m --- \ e [0m "
+echo   "  "
+echo   "  "
+echo  -e  " > \ e [1; 34mPresione entrar para instalar Radma ... \ e [0m "
+mirada lasciva
+echo  -e  " - \ e [1; 33mInstalación, espere ... \ e [0m "
+echo   "  "
 
 # Establecer adm, menú y restaurar
-si [ -d / etc / adm-lite] ;  entonces
-rm -rf / etc / adm-lite
+si [ -d / etc / adm-lite] ;   entonces
+rm -r f / etc / adm-lite
 fi
-si [ -d / etc / adm-backup] ;  entonces
-rm -rf / etc / adm-backup
+si [ -d / etc / adm-backup] ;   entonces
+rm -r f / etc / adm-backup
 fi
 mkdir / etc / adm-lite
 mkdir / etc / adm-backup
 cd / etc / adm-lite
-echo  " cd / etc / adm-lite && bash ./menu "  > / bin / menu
-echo  " cd / etc / adm-lite && bash ./menu "  > / bin / adm
-echo  " cd / etc / adm-backup && bash ./restore "  > / bin / restore
+echo   " cd / etc / adm-lite && bash ./menu "   > / bin / menu
+echo   " cd / etc / adm-lite && bash ./menu "   > / bin / adm
+echo   " cd / etc / adm-backup && bash ./restore "   > / bin / restore
 chmod + x / bin / menú
 chmod + x / bin / adm
 chmod + x / bin / restore
@@ -154,11 +154,14 @@ chmod + x / etc / adm-lite / verifica
 wget https://raw.githubusercontent.com/okeyomar/vpsgerard/master/adm-lite/versao_script -O / etc / adm-lite / versao_script 1> / dev / null 2> / dev / stdout
 chmod + x / etc / adm-lite / versao_script
 
+wget https://raw.githubusercontent.com/okeyomar/vpsgerard/master/adm-lite/menu_inst -O / etc / adm-lite / menu_inst 1> / dev / null 2> / dev / stdout
+chmod + x / etc / adm-lite / menu_inst
+
 wget https://raw.githubusercontent.com/okeyomar/vpsgerard/master/adm-lite/restore -O / etc / adm-backup / restore 1> / dev / null 2> / dev / stdout
 chmod + x / etc / adm-backup / restore
 
 # Backup
-cp -rf / etc / adm-lite / * / etc / adm-backup
+cp -r f / etc / adm-lite / * / etc / adm-backup
 
 # Instalar dependencias
 apt-get install screen -y
@@ -178,12 +181,12 @@ sed -i " s; Listen 80; Listen 81; g " /etc/apache2/ports.conf
 servicio apache2 reiniciar
 
 # Final
-echo  " "
-echo -e " > \ e [1; 33mRadma instalación completa! \ e [0m "
-echo -e " - \ e [1; 34mUse Radma corriendo \ e [0m \ e [1; 36madm \ e [0m \ e [1; 34mand \ e [0m \ e [1; 36mmenu \ e [0m \ e [ 1; 34mcomandos \ e [0m "
-echo -e " - \ e [1; 34mSi estos comandos dejan de funcionar, ejecute \ e [0m \ e [1; 36mrestore \ e [0m \ e [1; 34mpara arreglarlo \ e [0m "]
-echo  " "
-© 2018 GitHub , Inc.
+echo   "  "
+echo  -e  " > \ e [1; 33mRadma instalación completa! \ e [0m "
+echo  -e  " - \ e [1; 34mUse Radma corriendo \ e [0m \ e [1; 36madm \ e [0m \ e [1; 34mand \ e [0m \ e [1; 36mmenu \ e [0m \ e [ 1; 34mcomandos \ e [0m "
+echo  -e  " - \ e [1; 34mSi estos comandos dejan funcionar, ejecute \ e [0m \ e [1; 36mrestore \ e [0m \ e [1; 34mpara arreglarlo \ e [0m " ]
+echo   "  "
+© 2018 GitHub, Inc.
 Condiciones
 Intimidad
 Seguridad
@@ -195,4 +198,4 @@ API
 Formación
 Blog
 Acerca de
-Presione h para abrir una tarjeta con más detalles.
+Presione para abrir una tarjeta con más detalles.
